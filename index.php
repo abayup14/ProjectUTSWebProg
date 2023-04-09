@@ -7,6 +7,10 @@
     <title>Halaman Utama</title>
 </head>
 <body>
-    
+    <?php 
+        echo "<a href='input.php'>Input Data Disini</a><br>";
+        echo "<a href='setting.php'>Atur Tampilan Disini</a><br>";
+        echo "<a href='display.php'>Lihat Hasil Pengisian Data Disini</a>";
+    ?>
 </body>
 </html>

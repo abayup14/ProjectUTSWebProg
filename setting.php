@@ -2,34 +2,34 @@
     if (isset($_COOKIE["setting"])) {
         $arr_sett = $_COOKIE["setting"];
         
-        $alamat_input = ($arr_sett["alamat"]) ? $arr_sett["alamat"] : "";
-        $ipk_input = ($arr_sett["ipk"]) ? $arr_sett["ipk"] : "";
-        $ukuran_font = ($arr_sett["ukuran"]) ? $arr_sett["ukuran"] : "";
-        $style_font = ($arr_sett["fontstyle"]) ? $arr_sett["fontstyle"] : "";
-        $alamat_display = ($arr_sett["showalamat"]) ? $arr_sett["showalamat"] : "";
-        $ipk_display = ($arr_sett["showipk"]) ? $arr_sett["showipk"] : "";
-    }
+        $alamat_input = isset($arr_sett["alamat"]) ? $arr_sett["alamat"] : "";
+        $ipk_input = (isset($arr_sett["ipk"])) ? $arr_sett["ipk"] : "";
+        $ukuran_font = isset($arr_sett["ukuran"]) ? $arr_sett["ukuran"] : "";
+        $style_font = isset($arr_sett["fontstyle"]) ? $arr_sett["fontstyle"] : "";
+        $alamat_display = isset($arr_sett["showalamat"]) ? $arr_sett["showalamat"] : "";
+        $ipk_display = isset($arr_sett["showipk"]) ? $arr_sett["showipk"] : "";
 
-    // foreach ($arr_sett as $key => $val){
-    //     if($key == "alamat"){
-    //         $alamat_input = $val;
+    //     foreach ($arr_sett as $key => $val){
+    //         if($key == "alamat"){
+    //             $alamat_input = $val;
+    //         }
+    //         if ($key == "ipk") {
+    //             $ipk_input = $val;
+    //         }
+    //         if ($key == "ukuran") {
+    //             $ukuran_font = $val;
+    //         }
+    //         if ($key == "fontstyle") {
+    //             $style_font = $val;
+    //         }
+    //         if ($key == "showalamat") {
+    //             $alamat_display = $val;
+    //         }
+    //         if ($key == "showipk") {
+    //             $ipk_display = $val;
+    //         }
     //     }
-    //     if ($key == "ipk") {
-    //         $ipk_input = $val;
-    //     }
-    //     if ($key == "ukuran") {
-    //         $ukuran_font = $val;
-    //     }
-    //     if ($key == "fontstyle") {
-    //         $style_font = $val;
-    //     }
-    //     if ($key == "showalamat") {
-    //         $alamat_display = $val;
-    //     }
-    //     if ($key == "showipk") {
-    //         $ipk_display = $val;
-    //     }
-    // }
+    }
 ?>
 
 <!DOCTYPE html>

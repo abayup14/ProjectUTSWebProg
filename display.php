@@ -1,3 +1,18 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION["student"])) {
+        $arr_std = $_SESSION["student"];
+
+        print_r($arr_std);
+    }
+    
+
+    if (isset($_COOKIE["setting"])) {
+        $arr_set = $_COOKIE["setting"];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +22,8 @@
     <title>Display Data</title>
 </head>
 <body>
-    
+    <?php 
+        
+    ?>
 </body>
 </html>

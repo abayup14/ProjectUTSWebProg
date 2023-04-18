@@ -20,12 +20,6 @@
         setcookie("setting[fontstyle]", $_POST['selstyle'], time() + 3600);
         setcookie("setting[showalamat]", $_POST['rdoalamatshow'], time() + 3600);
         setcookie("setting[showipk]", $_POST['rdoipkshow'], time() + 3600);
-
-        $arr_sett = $_COOKIE["setting"];
-
-        foreach ($arr_sett as $key => $val) {
-            echo $key." = ".$val."<br>";
-        }
     }
 ?>
 </body>

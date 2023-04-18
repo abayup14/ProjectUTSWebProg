@@ -1,5 +1,15 @@
 <?php
-    $alamat_input = isset($_COOKIE["alamat"]) ? $_COOKIE["alamat"] : "";
+    $arr_sett = $_COOKIE["setting"];
+
+    $alamat = "";
+
+    foreach ($arr_sett as $key => $val){
+        if($key == "alamat"){
+            $alamat = $val;
+        }
+        
+    }
+    // $alamat_input = isset($_COOKIE["alamat"]) ? $_COOKIE["alamat"] : "";
     $ipk_input = isset($_POST["setting[ipk]"]) ? $_POST["setting[ipk]"] : "";  
     $ukuran_font = isset($_POST["setting[ukuran]"]) ? $_POST["setting[ukuran]"] : ""; 
     $style_font = isset($_POST["fontstyle"]) ? $_POST["fontstyle"] : "";
@@ -18,8 +28,8 @@
 <body>
     <form method="POST" action="index.php" enctype="multipart/form-data">
     <p><label>Alamat wajib diisi? </label>
-        <input type="radio" name="rdoalamat" value="y" <?php if ($alamat_input == "y") echo "checked"; ?>>Ya</input>
-        <input type="radio" name="rdoalamat" value="n" <?php if ($alamat_input == "n") echo "checked"; ?>>Tidak</input></p>
+        <input type="radio" name="rdoalamat" value="y" <?php if ($alamat == "y") echo "checked"; ?>>Ya</input>
+        <input type="radio" name="rdoalamat" value="n" <?php if ($alamat == "n") echo "checked"; ?>>Tidak</input></p>
         <p><label>Default IPK: </label>
         <input type="number" step="any" name="txtipk" min="0" max="4" value=<?php echo $ipk_input; ?> required></p>
         <p><label>Ukuran Font: </label>

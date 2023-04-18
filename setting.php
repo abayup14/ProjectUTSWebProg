@@ -30,9 +30,9 @@
         <p><label>Tampilan Font: </label>
         <select name="selstyle">
         <option value="">-- Pilih Tampilan --</option>
-        <option value="b" <?php if ($style_font) echo "selected" ?>><b>Bold</b></option>
-        <option value="i" <?php if ($style_font) echo "selected" ?>><i>Italic</i></option>
-        <option value="u" <?php if ($style_font) echo "selected" ?>><u>Underline</u></option>
+        <option value="b" <?php if ($style_font) echo "selected" ?>><?php echo "<b>Bold</b>" ?></option>
+        <option value="i" <?php if ($style_font) echo "selected" ?>><?php echo "<i>Italic</i>" ?></option>
+        <option value="u" <?php if ($style_font) echo "selected" ?>><?php echo "<u>Underline</u>" ?></option>
         </select>
         <p><label>Alamat ditampilkan? </label>
         <input type="radio" name="rdoalamatshow" <?php if ($alamat_display) echo "checked" ?>>Ya</input>
@@ -43,7 +43,7 @@
         
     </form>
 
-    <form method="index.php" action="POST">
+    <form method="POST" action="index.php">
         <p><input type="submit" name="btnsimpan" value="Simpan"></p>
     </form>
 </body>

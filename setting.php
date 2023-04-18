@@ -9,7 +9,6 @@
         $alamat_display = ($arr_sett["showalamat"]) ? $arr_sett["showalamat"] : "";
         $ipk_display = ($arr_sett["showipk"]) ? $arr_sett["showipk"] : "";
     }
-    
 
     // foreach ($arr_sett as $key => $val){
     //     if($key == "alamat"){

@@ -4,7 +4,7 @@
         header("location: setting.php");
     } else {
         $arr_set = $_COOKIE["setting"];
-        
+
         $ipk_default = ($arr_set["ipk"]) ? $arr_set["ipk"] : "";
         $alamat_default = ($arr_set["alamat"]) ? $arr_set["alamat"] : "";
     }  
@@ -45,8 +45,13 @@
 
     <?php
         if (isset($_POST["btnsimpaninput"])){
-            $test = array("nrp" => $_POST['txtnrp'], "nama" => $_POST['txtnama'], "alamat" => $_POST['txtalamat'], "ipk" => $_POST['txtipk']);
-            $_SESSION['user'] = $test;
+            $test = array(
+                "nrp" => $_POST['txtnrp'], 
+                "nama" => $_POST['txtnama'], 
+                "alamat" => $_POST['txtalamat'], 
+                "ipk" => $_POST['txtipk']);
+
+            $_SESSION['student'] = $test;
         }
     ?>
 </body>

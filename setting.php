@@ -1,33 +1,36 @@
 <?php
-    $arr_sett = $_COOKIE["setting"];
-
-    $alamat_input = "";
-    $ipk_input = "";
-    $ukuran_font = "";
-    $style_font = "";
-    $alamat_display = "";
-    $ipk_display = "";
-
-    foreach ($arr_sett as $key => $val){
-        if($key == "alamat"){
-            $alamat_input = $val;
-        }
-        if ($key == "ipk") {
-            $ipk_input = $val;
-        }
-        if ($key == "ukuran") {
-            $ukuran_font = $val;
-        }
-        if ($key == "fontstyle") {
-            $style_font = $val;
-        }
-        if ($key == "showalamat") {
-            $alamat_display = $val;
-        }
-        if ($key == "showipk") {
-            $ipk_display = $val;
-        }
+    if (isset($_COOKIE["setting"])) {
+        $arr_sett = $_COOKIE["setting"];
+        
+        $alamat_input = ($arr_sett["alamat"]) ? $arr_sett["alamat"] : "";
+        $ipk_input = ($arr_sett["ipk"]) ? $arr_sett["ipk"] : "";
+        $ukuran_font = ($arr_sett["ukuran"]) ? $arr_sett["ukuran"] : "";
+        $style_font = ($arr_sett["fontstyle"]) ? $arr_sett["fontstyle"] : "";
+        $alamat_display = ($arr_sett["showalamat"]) ? $arr_sett["showalamat"] : "";
+        $ipk_display = ($arr_sett["showipk"]) ? $arr_sett["showipk"] : "";
     }
+    
+
+    // foreach ($arr_sett as $key => $val){
+    //     if($key == "alamat"){
+    //         $alamat_input = $val;
+    //     }
+    //     if ($key == "ipk") {
+    //         $ipk_input = $val;
+    //     }
+    //     if ($key == "ukuran") {
+    //         $ukuran_font = $val;
+    //     }
+    //     if ($key == "fontstyle") {
+    //         $style_font = $val;
+    //     }
+    //     if ($key == "showalamat") {
+    //         $alamat_display = $val;
+    //     }
+    //     if ($key == "showipk") {
+    //         $ipk_display = $val;
+    //     }
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -57,20 +60,20 @@
             <label>Tampilan Font: </label>
             <select name="selstyle">
                 <option value="">-- Pilih Tampilan --</option>
-                <option value="b" <?php if ($style_font) echo "selected"; ?>><?php echo "<b>Bold</b>"; ?></option>
-                <option value="i" <?php if ($style_font) echo "selected"; ?>><?php echo "<i>Italic</i>"; ?></option>
-                <option value="u" <?php if ($style_font) echo "selected"; ?>><?php echo "<u>Underline</u>"; ?></option>
+                <option value="b" <?php if ($style_font) echo "selected"; ?>>Bold</option>
+                <option value="i" <?php if ($style_font) echo "selected"; ?>>Italic</option>
+                <option value="u" <?php if ($style_font) echo "selected"; ?>>Underline</option>
             </select>
         </p>  
         <p>
             <label>Alamat ditampilkan? </label>
-            <input type="radio" name="rdoalamatshow" value="y" <?php if ($alamat_display) echo "checked"; ?>>Ya</input>
-            <input type="radio" name="rdoalamatshow" value="n" <?php if ($alamat_display) echo "checked"; ?>>Tidak</input>
+            <input type="radio" name="rdoalamatshow" value="y" <?php if ($alamat_display == "y") echo "checked"; ?>>Ya</input>
+            <input type="radio" name="rdoalamatshow" value="n" <?php if ($alamat_display == "n") echo "checked"; ?>>Tidak</input>
         </p>
         <p>
             <label>IPK ditampilkan? </label>
-            <input type="radio" name="rdoipkshow" value="y" <?php if ($ipk_display) echo "checked"; ?>>Ya</input>
-            <input type="radio" name="rdoipkshow" value="n" <?php if ($ipk_display) echo "checked"; ?>>Tidak</input>
+            <input type="radio" name="rdoipkshow" value="y" <?php if ($ipk_display == "y") echo "checked"; ?>>Ya</input>
+            <input type="radio" name="rdoipkshow" value="n" <?php if ($ipk_display == "n") echo "checked"; ?>>Tidak</input>
         </p>
         <p>
             <input type="submit" name="btnsimpansetting" value="Simpan">

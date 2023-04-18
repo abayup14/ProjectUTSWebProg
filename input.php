@@ -2,6 +2,11 @@
     session_start();
     if(!isset($_COOKIE["setting"])) {
         header("location: setting.php");
+    } else {
+        $arr_set = $_COOKIE["setting"];
+        
+        $ipk_default = ($arr_set["ipk"]) ? $arr_set["ipk"] : "";
+        $alamat_default = ($arr_set["alamat"]) ? $arr_set["alamat"] : "";
     }  
 ?>
 
@@ -24,12 +29,13 @@
             <input type="text" name="txtnama" value="" required>
         </p>
         <p>
-            <label>Alamat : </label>
-            <textarea name="txtalamat"></textarea>
+            <?php $wajib = ($alamat_default == "y") ? true : false; ?>
+            <label>Alamat<?php if ($wajib == true) echo "*"; ?> : </label>
+            <textarea name="txtalamat" <?php if ($wajib == true) echo "required"; ?>></textarea>
         </p>
         <p>
             <label>IPK* : </label>
-            <input type="number" step="any" name="txtipk" min="0" max="4" required>
+            <input type="number" step="any" name="txtipk" min="0" max="4" value=<?php echo $ipk_default; ?> required>
         </p>
         <p>
             <input type="submit" name="btnsimpaninput" value="Simpan">

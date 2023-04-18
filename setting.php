@@ -43,7 +43,7 @@
         
     </form>
 
-    <form method="POST" action="index.php">
+    <form method="POST" action="index.php" enctype="multipart/form-data">
         <p><input type="submit" name="btnsimpan" value="Simpan"></p>
     </form>
 </body>

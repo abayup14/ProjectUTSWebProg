@@ -25,8 +25,11 @@ if(!isset($_COOKIE['remember']))
     </form>
 
     <?php
-        $test = array("nrp" => $_POST['txtnrp'], "nama" => $_POST['txtnama'], "alamat" => $_POST['txtalamat'], "ipk" => $_POST['txtipk']);
-        $_SESSION['user'] = $test;
+        if (isset($_POST["btnsimpan"])){
+            $test = array("nrp" => $_POST['txtnrp'], "nama" => $_POST['txtnama'], "alamat" => $_POST['txtalamat'], "ipk" => $_POST['txtipk']);
+            $_SESSION['user'] = $test;
+        }
+        
     ?>
 </body>
 </html>

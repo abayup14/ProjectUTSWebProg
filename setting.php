@@ -2,8 +2,10 @@
     $alamat_input = isset($_POST["alamat"]) ? $_POST["alamat"] : "";
     $ipk_input = isset($_POST["ipk"]) ? $_POST["ipk"] : "";  
     $ukuran_font = isset($_POST["ukuran"]) ? $_POST["ukuran"] : ""; 
+    $style_font = isset($_POST["fontstyle"]) ? $_POST["fontstyle"] : "";
+    $alamat_display = isset($_POST["showalamat"]) ? $_POST["showalamat"] : "";
+    $ipk_display = isset($_POST["showipk"]) ? $_POST["showipk"] : "";
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,14 +30,16 @@
         <p><label>Tampilan Font: </label>
         <select name="selstyle">
         <option value="">-- Pilih Tampilan --</option>
-        <option value="b"><b>Bold</b></option>
-        <option value="i"><i>Italic</i></option>
-        <option value="u"><u>Underline</u></option>
+        <option value="b" <?php if ($style_font) echo "selected" ?>><b>Bold</b></option>
+        <option value="i" <?php if ($style_font) echo "selected" ?>><i>Italic</i></option>
+        <option value="u" <?php if ($style_font) echo "selected" ?>><u>Underline</u></option>
         </select>
-        <p><label>Alamat ditampilkan? </label><input type="radio" name="rdoalamatshow">Ya</input>
-        <input type="radio" name="rdoalamatshow" required>Tidak</input></p>
-        <p><label>IPK ditampilkan? </label><input type="radio" name="rdoipkshow">Ya</input>
-        <input type="radio" name="rdoipkshow" required>Tidak</input></p>
+        <p><label>Alamat ditampilkan? </label>
+        <input type="radio" name="rdoalamatshow" <?php if ($alamat_display) echo "checked" ?>>Ya</input>
+        <input type="radio" name="rdoalamatshow" <?php if ($alamat_display) echo "checked" ?>>Tidak</input></p>
+        <p><label>IPK ditampilkan? </label>
+        <input type="radio" name="rdoipkshow" <?php if ($ipk_display) echo "checked" ?>>Ya</input>
+        <input type="radio" name="rdoipkshow" <?php if ($ipk_display) echo "checked" ?>>Tidak</input></p>
         
     </form>
 

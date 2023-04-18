@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_COOKIE['remember']))
+if(!isset($_COOKIE["setting"]))
     {
         header("location: setting.php");
     }  

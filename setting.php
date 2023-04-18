@@ -31,11 +31,15 @@
     </form>
 
     <?php
-    $setting = array("alamat" => $_POST['rdoalamat'], "ipk" => $_POST['txtipk'], "ukuran" => $_POST['txtsize'],
-    "fontstyle" => $_POST['selstyle'], "showalamat" => $_POST['rdoalamatshow'], "showipk" => $_POST['rdoipkshow']);
-    $cookie_name = "settings";
-    $cookie_value = $setting;
-    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+    if (isset($_POST["btnsimpan"])) {
+        setcookie("alamat", $_POST['rdoalamat'], time() + 3600);
+        setcookie("ipk", $_POST['txtipk'], time() + 3600);
+        setcookie("ukuran", $_POST['txtsize'], time() + 3600);
+        setcookie("fontstyle", $_POST['selstyle'], time() + 3600);
+        setcookie("showalamat", $_POST['rdoalamatshow'], time() + 3600);
+        setcookie("showipk", $_POST['rdoipkshow'], time() + 3600);
+    }
+    
     ?>
 </body>
 </html>

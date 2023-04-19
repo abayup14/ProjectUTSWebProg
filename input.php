@@ -41,6 +41,6 @@
             <input type="submit" name="btnsimpaninput" value="Simpan">
         </p>
     </form>
-    <p><a href="index.php">Kembali ke Halaman Utama</a></p>
+    <p style="font-size: medium; font-style: normal;"><a href='index.php'>Kembali ke Halaman Utama</a></p>
 </body>
 </html>

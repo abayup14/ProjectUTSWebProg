@@ -38,10 +38,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Utama</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        p {
+            font-size: medium; 
+            font-style: normal;
+        }
+    </style>
 </head>
 <body>
-    <a href="input.php">Input Data Disini</a><br>
-    <a href="setting.php">Atur Tampilan Disini</a><br>
-    <a href="display.php">Lihat Hasil Pengisian Data Disini</a>
+    <p><a href="input.php">Input Data Disini</a></p>
+    <p><a href="setting.php">Atur Tampilan Disini</a></p>
+    <p><a href="display.php">Lihat Hasil Pengisian Data Disini</a></p>
 </body>
 </html>

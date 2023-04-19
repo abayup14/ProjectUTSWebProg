@@ -26,25 +26,30 @@
         body {
             <?php
                 echo "font-size: $font_size;";
-                if ($font_style == "b") {
-                    echo "font-weight: bold;";
-                } else if ($font_style == "i") {
-                    echo "font-style: italic;";
-                } else {
-                    echo "text-decoration: underline;";
+                switch ($font_style) {
+                    case "b":
+                        echo "font-weight: bold;";
+                        break;
+                    case "i":
+                        echo "font-style: italic;";
+                        break;
+                    case "u":
+                        echo "text-decoration: underline;";
+                        break;
                 }
             ?>
         }
     </style>
 </head>
 <body>
+    <h1 style="font-style: normal;"><b>Data yang telah diisi dari halaman Input Data</b></h1>
     <?php
         $alamat_ditampilkan = ($alamat_display == "n") ? "hidden" : "";
         $ipk_ditampilkan = ($ipk_display == "n") ? "hidden" : "";
 
         for ($i = 0; $i < count($arr_std); $i++) {
             $count = $i + 1;
-            echo $count."<br>";
+            echo $count.".<br>";
             echo "<p>NRP : ".$arr_std[$i]["nrp"]."</p>";
             echo "<p>Nama : ".$arr_std[$i]["nama"]."</p>";
             echo "<p class='$alamat_ditampilkan'>Alamat : ".$arr_std[$i]["alamat"]."</p>";
@@ -52,6 +57,6 @@
             echo "<br>";
         }
     ?>
-    <p style="font-size: medium;"><a href='index.php'>Kembali ke Halaman Utama</a></p>
+    <p style="font-size: medium; font-style: normal;"><a href='index.php'>Kembali ke Halaman Utama</a></p>
 </body>
 </html>

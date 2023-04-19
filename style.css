@@ -1,13 +1,13 @@
-:link {
+a:link {
     color: blue;
 }
-:visited {
+a:visited {
     color: blue;
 }
-:hover {
+a:hover {
     color: blue;
 }
-:active {
+a:active {
     color: blue;
 }
 .hidden {

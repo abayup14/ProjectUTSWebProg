@@ -2,12 +2,12 @@
     session_start();
 
     if (isset($_POST["btnsimpansetting"])) {
-        setcookie("setting[alamat]", $_POST["rdoalamat"], time() + (24 *3600 * 30 * 365));
-        setcookie("setting[ipk]", $_POST['txtipk'], time() + (24 *3600 * 30 * 365));
-        setcookie("setting[ukuran]", $_POST['txtsize'], time() + (24 *3600 * 30 * 365));
-        setcookie("setting[fontstyle]", $_POST['selstyle'], time() + (24 *3600 * 30 * 365));
-        setcookie("setting[showalamat]", $_POST['rdoalamatshow'], time() + (24 *3600 * 30 * 365));
-        setcookie("setting[showipk]", $_POST['rdoipkshow'], time() + (24 *3600 * 30 * 365));
+        setcookie("setting[alamat]", $_POST["rdoalamat"], time() + (3600 * 24 * 365));
+        setcookie("setting[ipk]", $_POST['txtipk'], time() + (3600 * 24 * 365));
+        setcookie("setting[ukuran]", $_POST['txtsize'], time() + (3600 * 24 * 365));
+        setcookie("setting[fontstyle]", $_POST['selstyle'], time() + (3600 * 24 * 365));
+        setcookie("setting[showalamat]", $_POST['rdoalamatshow'], time() + (3600 * 24 * 365));
+        setcookie("setting[showipk]", $_POST['rdoipkshow'], time() + (3600 * 24 * 365));
     }
 
     if (isset($_SESSION["student"])) {

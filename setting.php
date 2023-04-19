@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1><b>Pengaturan Tampilan</b></h1>
     <form method="POST" action="index.php" enctype="multipart/form-data">
         <p>
             <label>Alamat wajib diisi? </label>

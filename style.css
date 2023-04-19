@@ -10,3 +10,6 @@
 :active {
     color: blue;
 }
+.hidden {
+    display: none;
+}

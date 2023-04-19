@@ -47,8 +47,8 @@
             echo $count."<br>";
             echo "<p>NRP : ".$arr_std[$i]["nrp"]."</p>";
             echo "<p>Nama : ".$arr_std[$i]["nama"]."</p>";
-            echo "<p $alamat_ditampilkan>Alamat : ".$arr_std[$i]["alamat"]."</p>";
-            echo "<p $ipk_ditampilkan>IPK : ".$arr_std[$i]["ipk"]."</p>";
+            echo "<p class='$alamat_ditampilkan'>Alamat : ".$arr_std[$i]["alamat"]."</p>";
+            echo "<p class='$ipk_ditampilkan'>IPK : ".$arr_std[$i]["ipk"]."</p>";
             echo "<br>";
         }
     ?>

@@ -3,9 +3,9 @@
         $arr_sett = $_COOKIE["setting"];
         
         $alamat_input = isset($arr_sett["alamat"]) ? $arr_sett["alamat"] : "";
-        $ipk_input = (isset($arr_sett["ipk"])) ? $arr_sett["ipk"] : "";
-        $ukuran_font = isset($arr_sett["ukuran"]) ? $arr_sett["ukuran"] : "";
-        $style_font = isset($arr_sett["fontstyle"]) ? $arr_sett["fontstyle"] : "";
+        $ipk_input = isset($arr_sett["ipk"]) ? $arr_sett["ipk"] : "";
+        $font_size = isset($arr_sett["ukuran"]) ? $arr_sett["ukuran"] : "";
+        $font_style = isset($arr_sett["fontstyle"]) ? $arr_sett["fontstyle"] : "";
         $alamat_display = isset($arr_sett["showalamat"]) ? $arr_sett["showalamat"] : "";
         $ipk_display = isset($arr_sett["showipk"]) ? $arr_sett["showipk"] : "";
 
@@ -39,12 +39,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form method="POST" action="index.php" enctype="multipart/form-data">
         <p>
             <label>Alamat wajib diisi? </label>
-            <input type="radio" name="rdoalamat" value="y" <?php if ($alamat_input == "y") echo "checked"; ?>>Ya</input>
+            <input type="radio" name="rdoalamat" value="y" <?php if ($alamat_input == "y") echo "checked"; ?> required>Ya</input>
             <input type="radio" name="rdoalamat" value="n" <?php if ($alamat_input == "n") echo "checked"; ?>>Tidak</input>
         </p>
         <p>
@@ -53,25 +54,25 @@
         </p>
         <p>
             <label>Ukuran Font: </label>
-            <input type="number" name="txtsize" min="1" value=<?php echo $ukuran_font; ?> required></input><label> px</label>
+            <input type="number" name="txtsize" min="1" value=<?php echo $font_size; ?> required></input><label> px</label>
         </p>
         <p>
             <label>Tampilan Font: </label>
-            <select name="selstyle">
+            <select name="selstyle" required>
                 <option value="">-- Pilih Tampilan --</option>
-                <option value="b" <?php if ($style_font) echo "selected"; ?>>Bold</option>
-                <option value="i" <?php if ($style_font) echo "selected"; ?>>Italic</option>
-                <option value="u" <?php if ($style_font) echo "selected"; ?>>Underline</option>
+                <option value="b" <?php if ($font_style == "b") echo "selected"; ?>>Bold</option>
+                <option value="i" <?php if ($font_style == "i") echo "selected"; ?>>Italic</option>
+                <option value="u" <?php if ($font_style == "u") echo "selected"; ?>>Underline</option>
             </select>
         </p>  
         <p>
             <label>Alamat ditampilkan? </label>
-            <input type="radio" name="rdoalamatshow" value="y" <?php if ($alamat_display == "y") echo "checked"; ?>>Ya</input>
+            <input type="radio" name="rdoalamatshow" value="y" <?php if ($alamat_display == "y") echo "checked"; ?> required>Ya</input>
             <input type="radio" name="rdoalamatshow" value="n" <?php if ($alamat_display == "n") echo "checked"; ?>>Tidak</input>
         </p>
         <p>
             <label>IPK ditampilkan? </label>
-            <input type="radio" name="rdoipkshow" value="y" <?php if ($ipk_display == "y") echo "checked"; ?>>Ya</input>
+            <input type="radio" name="rdoipkshow" value="y" <?php if ($ipk_display == "y") echo "checked"; ?> required>Ya</input>
             <input type="radio" name="rdoipkshow" value="n" <?php if ($ipk_display == "n") echo "checked"; ?>>Tidak</input>
         </p>
         <p>

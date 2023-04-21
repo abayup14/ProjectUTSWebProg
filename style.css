@@ -1,14 +1,18 @@
+body {
+    text-align:center;
+}
+
 a:link {
     color: blue;
 }
 a:visited {
-    color: blue;
+    color: purple;
 }
 a:hover {
-    color: blue;
+    color: green;
 }
 a:active {
-    color: blue;
+    color: yellow;
 }
 .hidden {
     display: none;

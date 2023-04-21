@@ -13,6 +13,10 @@
         $alamat_display = isset($arr_sett["showalamat"]) ? $arr_sett["showalamat"] : "";
         $ipk_display = isset($arr_sett["showipk"]) ? $arr_sett["showipk"] : "";
     }
+
+    if (!isset($_COOKIE["setting"])) {
+        header("location: setting.php?todo=1");
+    }
 ?>
 
 <html lang="en">

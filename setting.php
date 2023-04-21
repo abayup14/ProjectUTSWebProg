@@ -43,6 +43,16 @@
 </head>
 <body>
     <h1><b>Pengaturan Tampilan</b></h1>
+    <?php 
+        $todo = "";
+        if (isset($_GET["todo"])) {
+            $todo = $_GET["todo"];
+            switch ($todo) {
+                case "1":
+                    echo "<p>Anda belum pernah mengakses web ini. Silahkan atur tampilan website ini.</p>";
+            }
+        }
+    ?>
     <form method="POST" action="index.php" enctype="multipart/form-data">
         <p>
             <label>Alamat wajib diisi? </label>

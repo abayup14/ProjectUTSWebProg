@@ -1,6 +1,6 @@
 <?php
     if (!isset($_COOKIE["setting"])) {
-        header("location: setting.php");
+        header("location: setting.php?todo=1");
     } else {
         $arr_set = $_COOKIE["setting"];
 

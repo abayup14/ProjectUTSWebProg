@@ -59,6 +59,5 @@
             <li>Andreas Bayu Prakasa (160421058)</li>
         </ol>
     </p>
-    
 </body>
 </html>

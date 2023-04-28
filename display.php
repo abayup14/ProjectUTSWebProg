@@ -50,7 +50,7 @@
 <body>
     <div class="spacing"></div>
         <div class="container">
-            <h1 style="font-weight: normal; font-style: normal; text-decoration: none;"><b>Data yang telah diisi dari halaman Input Data</b></h1>
+            <h1><b>Data yang telah diisi dari halaman Input Data</b></h1>
             <?php
                 $alamat_ditampilkan = ($alamat_display == "n") ? "hidden" : "";
                 $ipk_ditampilkan = ($ipk_display == "n") ? "hidden" : "";

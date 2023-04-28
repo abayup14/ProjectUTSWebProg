@@ -47,9 +47,11 @@
 </head>
 <body>
     <h1><b>Selamat Datang!</b></h1>
-    <p><a href="input.php">Input Data Disini</a></p>
-    <p><a href="display.php">Lihat Hasil Pengisian Data Disini</a></p>
-    <p><a href="setting.php">Atur Tampilan Disini</a></p>
+    <div class="container">
+        <p><a href="input.php">Input Data Disini</a></p>
+        <p><a href="display.php">Lihat Hasil Pengisian Data Disini</a></p>
+        <p><a href="setting.php">Atur Tampilan Disini</a></p>
+    </div>
     <br>
     <p>
         <b>Dibuat Oleh:</b>

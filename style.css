@@ -17,3 +17,12 @@ a:active {
 .hidden {
     display: none;
 }
+
+.container { 
+    background-color: rgb(106, 155, 248);
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

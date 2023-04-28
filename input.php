@@ -22,6 +22,16 @@
     <div class="spacing"></div>
         <div class="container">
             <h1><b>Isikan data anda disini</b></h1>
+            <?php 
+                $todo = "";
+                if (isset($_GET["todo"])) {
+                    $todo = $_GET["todo"];
+                    switch ($todo) {
+                        case "2":
+                            echo "<p>Belum ada data di dalam website ini. Silahkan isi data terlebih dahulu disini.</p>";
+                    }
+                }
+            ?>
             <form method="POST" action="index.php" enctype="multipart/form-data">
                 <p>
                     <label>NRP* : </label>

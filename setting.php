@@ -42,54 +42,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1><b>Pengaturan Tampilan</b></h1>
-    <?php 
-        $todo = "";
-        if (isset($_GET["todo"])) {
-            $todo = $_GET["todo"];
-            switch ($todo) {
-                case "1":
-                    echo "<p>Anda belum pernah mengakses web ini. Silahkan atur tampilan website ini.</p>";
-            }
-        }
-    ?>
-    <form method="POST" action="index.php" enctype="multipart/form-data">
-        <p>
-            <label>Alamat wajib diisi? </label>
-            <input type="radio" name="rdoalamat" value="y" <?php if ($alamat_input == "y") echo "checked"; ?> required>Ya</input>
-            <input type="radio" name="rdoalamat" value="n" <?php if ($alamat_input == "n") echo "checked"; ?>>Tidak</input>
-        </p>
-        <p>
-            <label>Default IPK: </label>
-            <input type="number" step="any" name="txtipk" min="0" max="4" value=<?php echo $ipk_input; ?> required>
-        </p>
-        <p>
-            <label>Ukuran Font: </label>
-            <input type="number" name="txtsize" min="1" value=<?php echo $font_size; ?> required></input><label> px</label>
-        </p>
-        <p>
-            <label>Tampilan Font: </label>
-            <select name="selstyle" required>
-                <option value="">-- Pilih Tampilan --</option>
-                <option value="b" <?php if ($font_style == "b") echo "selected"; ?>>Bold</option>
-                <option value="i" <?php if ($font_style == "i") echo "selected"; ?>>Italic</option>
-                <option value="u" <?php if ($font_style == "u") echo "selected"; ?>>Underline</option>
-            </select>
-        </p>  
-        <p>
-            <label>Alamat ditampilkan? </label>
-            <input type="radio" name="rdoalamatshow" value="y" <?php if ($alamat_display == "y") echo "checked"; ?> required>Ya</input>
-            <input type="radio" name="rdoalamatshow" value="n" <?php if ($alamat_display == "n") echo "checked"; ?>>Tidak</input>
-        </p>
-        <p>
-            <label>IPK ditampilkan? </label>
-            <input type="radio" name="rdoipkshow" value="y" <?php if ($ipk_display == "y") echo "checked"; ?> required>Ya</input>
-            <input type="radio" name="rdoipkshow" value="n" <?php if ($ipk_display == "n") echo "checked"; ?>>Tidak</input>
-        </p>
-        <p>
-            <input type="submit" name="btnsimpansetting" value="Simpan">
-        </p>
-    </form>
-    <p style="font-size: medium; font-style: normal;"><a href='index.php'>Kembali ke Halaman Utama</a></p>
+    <div class="spacing"></div>
+        <div class="container">
+            <h1><b>Pengaturan Tampilan</b></h1>
+            <?php 
+                $todo = "";
+                if (isset($_GET["todo"])) {
+                    $todo = $_GET["todo"];
+                    switch ($todo) {
+                        case "1":
+                            echo "<p>Anda belum pernah mengakses web ini. Silahkan atur tampilan website ini.</p>";
+                    }
+                }
+            ?>
+            <form method="POST" action="index.php" enctype="multipart/form-data">
+                <p>
+                    <label>Alamat wajib diisi? </label>
+                    <input type="radio" name="rdoalamat" value="y" <?php if ($alamat_input == "y") echo "checked"; ?> required>Ya</input>
+                    <input type="radio" name="rdoalamat" value="n" <?php if ($alamat_input == "n") echo "checked"; ?>>Tidak</input>
+                </p>
+                <p>
+                    <label>Default IPK: </label>
+                    <input type="number" step="any" name="txtipk" min="0" max="4" value=<?php echo $ipk_input; ?> required>
+                </p>
+                <p>
+                    <label>Ukuran Font: </label>
+                    <input type="number" name="txtsize" min="1" value=<?php echo $font_size; ?> required></input><label> px</label>
+                </p>
+                <p>
+                    <label>Tampilan Font: </label>
+                    <select name="selstyle" required>
+                        <option value="">-- Pilih Tampilan --</option>
+                        <option value="b" <?php if ($font_style == "b") echo "selected"; ?>>Bold</option>
+                        <option value="i" <?php if ($font_style == "i") echo "selected"; ?>>Italic</option>
+                        <option value="u" <?php if ($font_style == "u") echo "selected"; ?>>Underline</option>
+                    </select>
+                </p>  
+                <p>
+                    <label>Alamat ditampilkan? </label>
+                    <input type="radio" name="rdoalamatshow" value="y" <?php if ($alamat_display == "y") echo "checked"; ?> required>Ya</input>
+                    <input type="radio" name="rdoalamatshow" value="n" <?php if ($alamat_display == "n") echo "checked"; ?>>Tidak</input>
+                </p>
+                <p>
+                    <label>IPK ditampilkan? </label>
+                    <input type="radio" name="rdoipkshow" value="y" <?php if ($ipk_display == "y") echo "checked"; ?> required>Ya</input>
+                    <input type="radio" name="rdoipkshow" value="n" <?php if ($ipk_display == "n") echo "checked"; ?>>Tidak</input>
+                </p>
+                <p>
+                    <input type="submit" name="btnsimpansetting" value="Simpan">
+                </p>
+            </form>
+            <p style="font-size: medium; font-style: normal;"><a href='index.php'>Kembali ke Halaman Utama</a></p>
+        </div<>
+    </div<>
 </body>
 </html>

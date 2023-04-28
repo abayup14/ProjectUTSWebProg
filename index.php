@@ -46,20 +46,24 @@
     </style>
 </head>
 <body>
-    <h1><b>Selamat Datang!</b></h1>
-    <div class="container">
-        <p><a href="input.php">Input Data Disini</a></p>
-        <p><a href="display.php">Lihat Hasil Pengisian Data Disini</a></p>
-        <p><a href="setting.php">Atur Tampilan Disini</a></p>
+    <div class="spacing"></div>
+        <div class="container">
+            <h1><b>Selamat Datang!</b></h1>
+
+            <p><a href="input.php">Input Data Disini</a></p>
+            <p><a href="display.php">Lihat Hasil Pengisian Data Disini</a></p>
+            <p><a href="setting.php">Atur Tampilan Disini</a></p>
+
+            <br>
+            <p>
+                <b>Dibuat Oleh:</b>
+                <ol>
+                    <li>Ignatius Steven Christopher B. (160421001)</li>
+                    <li>Felicia (160421005)</li>
+                    <li>Andreas Bayu Prakasa (160421058)</li>
+                </ol>
+            </p>
+        </div>
     </div>
-    <br>
-    <p>
-        <b>Dibuat Oleh:</b>
-        <ol>
-            <li>Ignatius Steven Christopher B. (160421001)</li>
-            <li>Felicia (160421005)</li>
-            <li>Andreas Bayu Prakasa (160421058)</li>
-        </ol>
-    </p>
 </body>
 </html>

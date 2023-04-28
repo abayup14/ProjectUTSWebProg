@@ -1,4 +1,11 @@
 <?php
+    $alamat_input = "";
+    $ipk_input = "";
+    $font_size = "";
+    $font_style = "";
+    $alamat_display = "";
+    $ipk_display = "";
+
     if (isset($_COOKIE["setting"])) {
         $arr_sett = $_COOKIE["setting"];
         

@@ -4,6 +4,9 @@
     if (isset($_SESSION["student"])) {
         $arr_std = $_SESSION["student"];
     }
+    else {
+        header("location: input.php?todo=1");
+    } 
 
     if (isset($_COOKIE["setting"])) {
         $arr_sett = $_COOKIE["setting"];
